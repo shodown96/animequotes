@@ -1,0 +1,1 @@
+export { allQuotesController, singleQuoteController } from './quotes.controller'
