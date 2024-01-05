@@ -73,16 +73,16 @@ function Quotes() {
 
     return (
         <div className='pt-24 px-10 pb-10 lg:px-24'>
-            <div className="flex items-center gap-4 mb-10">
+            <div className="flex items-center lg:flex-nowrap flex-wrap gap-4 mb-10">
                 <Searchbar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
                 <select
                     onChange={(e) => setSelectedOption(e.target.value)}
-                    className="p-4 outline-none rounded-xl border border-primary">
+                    className="p-4 w-full lg:w-auto outline-none rounded-xl border border-primary">
                     {AppConfig.OPTIONS.map((x, i) => (
                         <option key={i} value={x.value} selected={x.value === selectedOption}>{x.label}</option>
                     ))}
                 </select>
-                <Button className="rounded-xl !py-3" onClick={getQuotes}>Search</Button>
+                <Button className="rounded-xl !py-4 w-full lg:w-auto" onClick={getQuotes}>Search</Button>
             </div>
             <h1 className="text-xl text-center mb-10 font-semibold">
                 Relive the epic quotes that stirred your soul and fueled your passion
